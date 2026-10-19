@@ -31,6 +31,7 @@
       "description": "Professional massage in Edinburgh offering deep tissue, sports, relaxation, Shiatsu chair and mobile massage from South Side Edinburgh.",
       "url": "https://armmassage.uk/",
       "telephone": "+447404891853",
+      "email": "armactivemassage@gmail.com",
       "priceRange": "££",
       "address": {
         "@type": "PostalAddress",
@@ -1605,6 +1606,43 @@
       line-height:1.8;
     }
 
+
+
+    /* ============================================
+       MOBILE NAV — keep header inside phone screen
+       ============================================ */
+    @media (max-width: 768px) {
+      nav {
+        padding: 0 20px;
+        gap: 16px;
+      }
+
+      /* The full desktop brand is too wide for a phone.
+         Keep ARM visible and hide the long descriptor on mobile only. */
+      .nav-logo {
+        min-width: 0;
+        max-width: calc(100% - 48px);
+        flex: 1 1 auto;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 18px;
+      }
+
+      .nav-logo span {
+        display: none;
+      }
+
+      .nav-hamburger {
+        display: flex;
+        flex: 0 0 auto;
+        margin-left: auto;
+      }
+
+      .mobile-menu {
+        padding: 24px 24px 32px;
+      }
+    }
+
 </style>
 <body>
 <!-- ============================================================
@@ -2088,6 +2126,10 @@
 <a class="cd-value" href="tel:07404891853">07404 891853</a>
 </div>
 <div class="contact-detail">
+<span class="cd-label">Email</span>
+<a class="cd-value" href="mailto:armactivemassage@gmail.com">armactivemassage@gmail.com</a>
+</div>
+<div class="contact-detail">
 <span class="cd-label">Location</span>
 <span class="cd-value">South Side Edinburgh</span>
 </div>
@@ -2153,6 +2195,7 @@
 <div class="footer-mid">
 <p> South Side Edinburgh</p>
 <p><a href="tel:07404891853">07404 891853</a></p>
+<p><a href="mailto:armactivemassage@gmail.com">armactivemassage@gmail.com</a></p>
 <p><a href="https://armmassage.uk">armmassage.uk</a></p>
 </div>
 <div class="footer-guides">
