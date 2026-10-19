@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 
-<html <head="" lang="en">
+<html lang="en">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Professional massage in South Side Edinburgh. Deep tissue, sports, relaxation, Shiatsu chair, mobile massage. Book by WhatsApp with ARM Active Recovery Massage." name="description"/>
 <meta content="lW58A-u31XuUGV8UlTg8bqnbNPo1UBtG7yTbX9IXqwE" name="google-site-verification"/>
 <title>ARM | Active Recovery Massage Edinburgh</title>
-<link href="https://armmassage.uk/" rel="canonical"/>
+<link href="https://armactivemassage.co.uk/" rel="canonical"/>
 <meta content="index, follow, max-image-preview:large" name="robots"/>
 <meta content="website" property="og:type"/>
 <meta content="en_GB" property="og:locale"/>
 <meta content="ARM Active Recovery Massage" property="og:site_name"/>
 <meta content="ARM Active Recovery Massage | Edinburgh" property="og:title"/>
 <meta content="Professional massage in South Side Edinburgh. Deep tissue, sports, relaxation, Shiatsu chair, mobile massage." property="og:description"/>
-<meta content="https://armmassage.uk/" property="og:url"/>
+<meta content="https://armactivemassage.co.uk/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="ARM Active Recovery Massage | Edinburgh" name="twitter:title"/>
 <meta content="Deep tissue, sports, relaxation, Shiatsu chair and mobile massage from South Side Edinburgh." name="twitter:description"/>
@@ -26,12 +27,11 @@
         "LocalBusiness",
         "HealthAndBeautyBusiness"
       ],
-      "@id": "https://armmassage.uk/#business",
+      "@id": "https://armactivemassage.co.uk/#business",
       "name": "ARM Active Recovery Massage",
       "description": "Professional massage in Edinburgh offering deep tissue, sports, relaxation, Shiatsu chair and mobile massage from South Side Edinburgh.",
-      "url": "https://armmassage.uk/",
+      "url": "https://armactivemassage.co.uk/",
       "telephone": "+447404891853",
-      "email": "armactivemassage@gmail.com",
       "priceRange": "££",
       "address": {
         "@type": "PostalAddress",
@@ -109,12 +109,12 @@
     },
     {
       "@type": "WebSite",
-      "@id": "https://armmassage.uk/#website",
-      "url": "https://armmassage.uk/",
+      "@id": "https://armactivemassage.co.uk/#website",
+      "url": "https://armactivemassage.co.uk/",
       "name": "ARM Active Recovery Massage",
       "inLanguage": "en-GB",
       "publisher": {
-        "@id": "https://armmassage.uk/#business"
+        "@id": "https://armactivemassage.co.uk/#business"
       }
     }
   ]
@@ -1643,7 +1643,55 @@
       }
     }
 
+
+
+    /* ============================================
+       MOBILE VISIBLE TABS
+       Keep the main page links on-screen on phones.
+       ============================================ */
+    .mobile-tabbar { display: none; }
+
+    @media (max-width: 768px) {
+      /* Keep the compact ARM brand inside the screen */
+      .nav-logo span { display: none !important; }
+      .nav-logo { max-width: calc(100% - 20px); overflow: hidden; white-space: nowrap; }
+
+      /* The visible tab strip replaces the hidden/off-screen desktop links */
+      .nav-links, .nav-, .nav-hamburger, .mobile-menu { display: none !important; }
+      .mobile-tabbar {
+        position: fixed;
+        display: flex;
+        top: 64px;
+        left: 0;
+        right: 0;
+        height: 44px;
+        z-index: 99;
+        align-items: center;
+        gap: 18px;
+        padding: 0 18px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        background: rgba(13,13,13,.98);
+        border-bottom: 1px solid var(--border);
+      }
+      .mobile-tabbar::-webkit-scrollbar { display: none; }
+      .mobile-tabbar a {
+        flex: 0 0 auto;
+        font-size: 10px;
+        letter-spacing: 1.45px;
+        text-transform: uppercase;
+        color: var(--text-mid);
+      }
+      .mobile-tabbar a:last-child { color: var(--accent); }
+      section { scroll-margin-top: 118px; }
+      #home { padding-top: 44px; }
+    }
+
 </style>
+</head>
 <body>
 <!-- ============================================================
      NAV
@@ -1654,7 +1702,7 @@
 <li><a href="about.html">About</a></li>
 <li><a href="#treatments">Treatments</a></li>
 <li><a href="#prices">Prices</a></li>
-<li><a href="#mobile">Mobile</a></li>
+<li><a href="mobile-massage.html">Mobile</a></li>
 <li><a href="#faq">FAQ</a></li>
 <li><a href="#gallery">Gallery</a></li>
 </ul>
@@ -1667,10 +1715,19 @@
 <a href="about.html" onclick="closeMenu()">About</a>
 <a href="#treatments" onclick="closeMenu()">Treatments</a>
 <a href="#prices" onclick="closeMenu()">Prices</a>
-<a href="#mobile" onclick="closeMenu()">Mobile</a>
+<a href="mobile-massage.html" onclick="closeMenu()">Mobile</a>
 <a href="#faq" onclick="closeMenu()">FAQ</a>
 <a href="#gallery" onclick="closeMenu()">Gallery</a>
 <a href="#contact" onclick="closeMenu()" style="color:var(--accent)"> Now →</a>
+</div>
+<div class="mobile-tabbar" aria-label="Mobile navigation">
+<a href="about.html">About</a>
+<a href="#treatments">Treatments</a>
+<a href="#prices">Prices</a>
+<a href="mobile-massage.html">Mobile</a>
+<a href="#faq">FAQ</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Book</a>
 </div>
 <!-- ============================================================
      HERO
@@ -2126,10 +2183,6 @@
 <a class="cd-value" href="tel:07404891853">07404 891853</a>
 </div>
 <div class="contact-detail">
-<span class="cd-label">Email</span>
-<a class="cd-value" href="mailto:armactivemassage@gmail.com">armactivemassage@gmail.com</a>
-</div>
-<div class="contact-detail">
 <span class="cd-label">Location</span>
 <span class="cd-value">South Side Edinburgh</span>
 </div>
@@ -2139,11 +2192,11 @@
 <p style="font-size:13px;color:var(--text-dim);margin-bottom:4px;">No problem. Tell me a little about what you're looking for and I'll be in touch shortly.</p>
 <div class="form-field">
 <label>Your Name</label>
-<input name="name" placeholder="First &amp; last name" required="" type="text"/>
+<input name="name" placeholder="First &amp; last name" type="text"/>
 </div>
 <div class="form-field">
-<label>Email</label>
-<input name="email" placeholder="Your email address" required="" type="email"/>
+<label>Phone or Email</label>
+<input name="_replyto" placeholder="Your email address" required="" type="email"/>
 </div>
 <div class="form-field">
 <label>Treatment</label>
@@ -2176,7 +2229,7 @@
 </div>
 <div class="form-field">
 <label>Message</label>
-<textarea name="message" placeholder="Tell me a little about what you're looking for..." required="" rows="3"></textarea>
+<textarea name="message" placeholder="Tell me a little about what you're looking for..." rows="3"></textarea>
 </div>
 <button class="form-submit" type="submit">Send Message →</button>
 </form>
@@ -2195,8 +2248,7 @@
 <div class="footer-mid">
 <p> South Side Edinburgh</p>
 <p><a href="tel:07404891853">07404 891853</a></p>
-<p><a href="mailto:armactivemassage@gmail.com">armactivemassage@gmail.com</a></p>
-<p><a href="https://armmassage.uk">armmassage.uk</a></p>
+<p><a href="https://armactivemassage.co.uk">armactivemassage.co.uk</a></p>
 </div>
 <div class="footer-guides">
 <div class="footer-social-label">Massage Guides</div>
